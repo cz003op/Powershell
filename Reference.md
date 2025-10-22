@@ -1,13 +1,12 @@
 # PowerShell Special Characters, Operators, and Punctuation Reference
 
-This document lists PowerShell's key punctuators and operator tokens as described in the [PowerShell Language Specification](https://learn.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-02?view=powershell-7.5).
+This is a reference that lists PowerShell's key punctuators and operator tokens as described in the [PowerShell Language Specification](https://learn.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-02?view=powershell-7.5).
 
-Each token includes:
+Each section includes:
 - A brief **description**
 - A **simple example**
 - A more complete **"all-options" example**
 
----
 
 ## Brackets and Block Delimiters
 
@@ -20,7 +19,7 @@ Each token includes:
 | `@{}` | Hashtable literal | `@{Name="Bob"}` | `$user = @{ Name="Bob"; Age=40; Skills=@("PS", "C#") }` |
 | `$()` | Subexpression (e.g. inside strings) | `"Time: $(Get-Date)"` | `"User: $($name.ToUpper()) at $(Get-Date -Format T)"` |
 
----
+
 
 ## Pipelines, Redirection, and Execution
 
@@ -30,7 +29,7 @@ Each token includes:
 | `&` | Call operator (invoke command/scriptblock) | `& { "Hello" }` | `$code = { param($x) $x*2 }; & $code 5` |
 | `;` | Statement separator | `Write-Host "A"; Write-Host "B"` | `if ($a) { "Yes" } else { "No" }; "Done"` |
 
----
+
 
 ## Logic and Control Operators
 
@@ -41,7 +40,6 @@ Each token includes:
 | `-not` / `!` | Logical NOT | `-not $exists` | `if (!(Test-Path $file)) { "Missing" }` |
 | `-xor` | Logical XOR | `$a -xor $b` | `if ($a -xor $b) { "Only one is true" }` |
 
----
 
 ## Arithmetic Operators
 
@@ -60,7 +58,7 @@ Each token includes:
 | `=` | Assignment | `$x = 10` | `$x = 5; $y = $x * 2` |
 | `+=`, `-=`, `*=`, `/=`, `%=`, `++`, `--` | Compound assignments | `$x += 2` | `$total = 0; foreach ($i in 1..5) { $total += $i }` |
 
----
+
 
 ## Bitwise Operators
 
@@ -71,7 +69,7 @@ Each token includes:
 | `-bxor` | Bitwise XOR | `5 -bxor 3` | `if (($x -bxor $y) -ne 0) { "Differs" }` |
 | `-bnot` | Bitwise NOT | `-bnot 0x0F` | `$mask = -bnot $value` |
 
----
+
 
 ## Comparison Operators
 
@@ -96,7 +94,7 @@ Each token includes:
 | `2>`, `2>>` | Redirect stderr | `command 2> err.txt` |
 | `*>`, `*>>` | Redirect all output streams | `command *> all.txt` |
 
----
+
 
 ## Type and Casting
 
@@ -117,7 +115,7 @@ Each token includes:
 | `::` | Static member access | `[Math]::Sqrt(16)` |
 | `.` | Instance member access or dot-sourcing | `"abc".Length` or `. .\script.ps1` |
 
----
+
 
 ## Logical Chaining (PowerShell 7+)
 
@@ -126,7 +124,4 @@ Each token includes:
 | `&&` | Run next if previous succeeds | `Test-Path file.txt && Write-Host "Found"` |
 | `||` | Run next if previous fails | `Test-Path missing.txt || New-Item missing.txt` |
 
----
-
-> ✅ **Tip:** For help in PowerShell, use `Get-Help about_Operators` or `Get-Help about_*` to explore language features.
 
