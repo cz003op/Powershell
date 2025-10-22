@@ -49,7 +49,7 @@ Each section includes:
 | `++`, `--` | Increment, Decrement | `$i++` | `while ($i-- -gt 0) { $i }` |
 | `..` | Range | `1..5` | `foreach ($i in 10..1) { $i }` |
 
----
+
 
 ## Assignment and Compound Assignment
 
@@ -83,7 +83,7 @@ Each section includes:
 | `-replace` | Regex replace | `$s -replace "\s", "_"` |
 | `-split` | String split | `"a,b,c" -split ","` |
 
----
+
 
 ## Redirection Operators
 
@@ -104,7 +104,7 @@ Each section includes:
 | `-is`, `-isnot` | Type check | `$x -is [int]` | `if ($item -isnot [DateTime]) { "Invalid" }` |
 | `[type]` | Hard cast | `[int]"5"` | `[datetime]"2025-10-01"` |
 
----
+
 
 ## Special Constructs
 
